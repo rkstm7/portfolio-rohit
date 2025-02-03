@@ -19,7 +19,7 @@ const Home = () => {
               <br /> <span className="text-accent">Rohit Kumar</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80 text-justify">
-              I am currently doing an{" "}
+              I am currently doing a{" "}
               <b className="text-pink-300 font-extrabold italic">
                 Python Full Stack Development
               </b>{" "}

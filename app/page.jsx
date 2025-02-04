@@ -18,28 +18,30 @@ const Home = () => {
               Hello I'm
               <br /> <span className="text-accent">Rohit Kumar</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80 text-justify">
+            <p className="max-w-[500px] mb-9 text-white/80 text-justify text-align">
               I am currently doing a{" "}
               <b className="text-pink-300 font-extrabold italic">
-                Python Full Stack Development
+                Python Full Stack Development{""}
               </b>{" "}
               Internship at{" "}
               <b className="text-pink-300 font-extrabold italic">
-                YSM Info Solution
-              </b>
-              . I have completed{" "}
+                YSM Info Solution.
+              </b>{" "}
+              I have completed{" "}
               <b className="text-pink-300 font-extrabold italic">
                 Full Stack Web Development
               </b>{" "}
-              training at{" "}
-              <b className="text-pink-300 font-extrabold italic">PantechAI</b>
-              and worked as a{" "}
+              internship at{" "}
+              <b className="text-pink-300 font-extrabold italic">
+                PantechAI & Bharat Intern{" "}
+              </b>
+              and{" "}
               <b className="text-pink-300 font-extrabold italic">
                 Java Development
               </b>{" "}
               Intern at{" "}
               <b className="text-pink-300 font-extrabold italic">
-                InternshipStudio (BharatIntern)
+                Internship Studio
               </b>
               . Additionally, I contributed as an Editor at RAC Pune Wisdom.
               With expertise in{" "}

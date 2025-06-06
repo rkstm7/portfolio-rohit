@@ -1,6 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=rohitkumar.ai-interview-platform)
+## 👋 Welcome to My Portfolio Repository
 
+![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=rkstm7.portfolio-rohit)
 ## Getting Started
 
 First, run the development server:

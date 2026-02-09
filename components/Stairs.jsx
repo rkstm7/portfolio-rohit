@@ -1,44 +1,69 @@
+"use client";
+
 import { motion } from "framer-motion";
 
-const stairAnimation = {
+const diamondAnimation = {
   initial: {
-    top: "0%",
+    scale: 0,
+    rotate: 0,
+    opacity: 1,
   },
   animate: {
-    top: "100%",
+    scale: 1.5,
+    rotate: 180,
+    opacity: 0,
   },
   exit: {
-    top: ["100%", "0%"],
+    scale: 0,
+    rotate: 0,
+    opacity: 1,
   },
-};
-
-//calcualte the reverse index for staggred delay
-const reverseIndex = (index) => {
-  const totalSteps = 6;
-  return totalSteps - index - 1;
 };
 
 const Stairs = () => {
+  const positions = [
+    { top: "50%", left: "50%" },
+    { top: "25%", left: "25%" },
+    { top: "25%", left: "75%" },
+    { top: "75%", left: "25%" },
+    { top: "75%", left: "75%" },
+    { top: "50%", left: "10%" },
+    { top: "50%", left: "90%" },
+  ];
+
+  const colors = [
+    "from-accent to-pink-300",
+    "from-pink-300 to-purple-400",
+    "from-purple-400 to-blue-400",
+    "from-blue-400 to-accent",
+    "from-accent to-pink-300",
+    "from-pink-300 to-purple-400",
+    "from-purple-400 to-blue-400",
+  ];
+
   return (
     <>
-      {/* Render 6 motion divs, each representing a step of the stairs
-    Each Will have the same animation defined by the stairsAnimation object. 
-    The delay for each div is calculated sinamically based on its reversed index, 
-    creating a staggered effect with decreasing delay for each subsequent step*/}
-      {[...Array(6)].map((_, index) => {
+      {/* Smooth Visible Diamond Animation */}
+      {positions.map((pos, index) => {
         return (
           <motion.div
             key={index}
-            variants={stairAnimation}
+            variants={diamondAnimation}
             initial="initial"
             animate="animate"
             exit="exit"
             transition={{
-              duration: 0.3,
-              ease: "easeInOut",
-              delay: reverseIndex(index) * 0.1,
+              duration: 1,
+              ease: [0.22, 1, 0.36, 1],
+              delay: index * 0.1,
             }}
-            className="h-full w-full bg-white relative"
+            className={`absolute w-96 h-96 bg-gradient-to-br ${colors[index]} -translate-x-1/2 -translate-y-1/2`}
+            style={{
+              top: pos.top,
+              left: pos.left,
+              clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
+              filter: "blur(15px)",
+            }}
           />
         );
       })}
